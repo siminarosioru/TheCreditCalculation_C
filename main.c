@@ -32,6 +32,7 @@ int main()
 }
 
 //function definition
+//the function reads the members of the structure, then calculates the loan sum and returns it
 double readLoanSum(struct BankAccount *i)
 {
     printf("Enter the name: ");
