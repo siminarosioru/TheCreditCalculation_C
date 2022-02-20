@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//I used a structure(the keyword is struct) to declare members which are public
 struct BankAccount
 {
     char *Name;
@@ -10,6 +11,7 @@ struct BankAccount
     double m_loanSum;
 };
 
+//function prototype
 double readLoanSum(struct BankAccount *i);
 
 int main()
@@ -29,6 +31,7 @@ int main()
     return 0;
 }
 
+//function definition
 double readLoanSum(struct BankAccount *i)
 {
     printf("Enter the name: ");
