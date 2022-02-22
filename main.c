@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+double member1, member2; //global variables
+
 //I used a structure(the keyword is struct) to declare members which are public
 struct BankAccount
 {
@@ -9,10 +11,12 @@ struct BankAccount
     double m_interest;
     int m_numberMounths;
     double m_loanSum;
+    double totalSum;
 };
 
 //function prototype
 double readLoanSum(struct BankAccount *i);
+double TotalSum(struct BankAccount *i);
 
 int main()
 {
@@ -25,6 +29,8 @@ int main()
         exit(-1);
 
     readLoanSum(ptrBka);
+    
+    TotalSum(ptrBka);
 
     free(ptrBka->Name);
 
@@ -50,4 +56,14 @@ double readLoanSum(struct BankAccount *i)
     i->m_loanSum = (i->m_interestRate * 100) / i->m_interest;
 
     return i->m_loanSum;
+}
+
+double TotalSum(struct BankAccount *i)
+{
+    member1 = i->m_interestRate / (double)i->m_numberMounths;
+    member2 = i->m_loanSum / (double)i->m_numberMounths;
+
+    i->totalSum = (member1 + member2);
+
+    return i->totalSum;
 }
