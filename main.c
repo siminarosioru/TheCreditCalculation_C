@@ -17,6 +17,7 @@ struct BankAccount
 //function prototype
 double readLoanSum(struct BankAccount *i);
 double TotalSum(struct BankAccount *i);
+void printSum(struct BankAccount *i);
 
 int main()
 {
@@ -31,6 +32,8 @@ int main()
     readLoanSum(ptrBka);
     
     TotalSum(ptrBka);
+    
+    printSum(ptrBka);
 
     free(ptrBka->Name);
 
@@ -66,4 +69,11 @@ double TotalSum(struct BankAccount *i)
     i->totalSum = (member1 + member2);
 
     return i->totalSum;
+}
+
+void printSum(struct BankAccount *i)
+{
+    //display
+    printf("The loaned sum is %.2lf", i->m_loanSum);
+    printf("\nThe total sum per month is %.2lf", i->totalSum);
 }
