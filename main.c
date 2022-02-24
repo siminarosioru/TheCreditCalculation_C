@@ -73,9 +73,10 @@ double TotalSum(struct BankAccount *i)
     return i->totalSum;
 }
 
+//function definition
+//the function displays the loan sum and the total sum per month
 void printSum(struct BankAccount *i)
 {
-    //display
     printf("The loaned sum is %.2lf", i->m_loanSum);
     printf("\nThe total sum per month is %.2lf", i->totalSum);
 }
