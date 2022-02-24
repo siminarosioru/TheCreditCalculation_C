@@ -61,6 +61,8 @@ double readLoanSum(struct BankAccount *i)
     return i->m_loanSum;
 }
 
+//function definition
+//the function calculates the total sum based on the interest rate, the number of months, the loan sum and returns the total sum
 double TotalSum(struct BankAccount *i)
 {
     member1 = i->m_interestRate / (double)i->m_numberMounths;
